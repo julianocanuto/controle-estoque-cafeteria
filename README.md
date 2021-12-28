@@ -58,21 +58,21 @@ Situação resolvida, agora o cliente pediu novas alterações, como sempre. **E
 # Tarefas
 
 - estruturar todo sistema de estoque e produtos
-  - quantos ingredientes tem na loja
-  - crie uma estrutura de ingrediente com nome, unidade de medida e preço unitario
-  - ter um produto (...) com: nome, imagem, preço e os ingredientes
-  - fazer um novo objeto que faça referência a esse ingrediente com a quantidade que é usado, nós chamamos de componente.
-  - organize em um objeto para que o cliente consiga visualizar os ingredientes da loja e quanto tem de estoque atualmente.
-  - faça uma rota de verificação para saber se o produto X pode ser vendido.
-  - faça uma rota de controle manual para o dono da loja imputar os valores do estoque.
-  - será necessario uma rota para CRUD dessas informações (informações da loja).
-  - alterar as informações é restrito
-  - rotas especificas precisa de um login para controlar
-  - relatório para saber o custo dos produtos
-  - Precisamos de uma rota que retorne todos os produtos e o custo de cada um.
-  - Validar todos os campos para ninguem quebrar a loja
-  - Login precisa ser criptografado a senha
-  - Documentar para entendimento do código. (comentar algumas coisas explicando)
-  - Tratar erros corretamente (404 para não encontrado), (200 | 202 para OK), etc
-  - Upload de imagens 
-  - Restringir o upload de imagens aos seguintes formatos: PNG e JPG
+  - [ ] quantos ingredientes tem na loja
+  - [x] crie uma estrutura de ingrediente com nome, unidade de medida e preço unitario
+  - [x] ter um produto (...) com: nome, imagem, preço e os ingredientes
+  - [ ] fazer um novo objeto que faça referência a esse ingrediente com a quantidade que é usado, nós chamamos de componente.
+  - [ ] organize em um objeto para que o cliente consiga visualizar os ingredientes da loja e quanto tem de estoque atualmente.
+  - [ ] faça uma rota de verificação para saber se o produto X pode ser vendido.
+  - [ ] faça uma rota de controle manual para o dono da loja imputar os valores do estoque.
+  - [ ] será necessario uma rota para CRUD dessas informações (informações da loja).
+  - [ ] alterar as informações é restrito
+  - [ ] rotas especificas precisa de um login para controlar
+  - [ ] relatório para saber o custo dos produtos
+  - [ ] Precisamos de uma rota que retorne todos os produtos e o custo de cada um.
+  - [ ] Validar todos os campos para ninguem quebrar a loja
+  - [ ] Login precisa ser criptografado a senha
+  - [ ] Documentar para entendimento do código. (comentar algumas coisas explicando)
+  - [ ] Tratar erros corretamente (404 para não encontrado), (200 | 202 para OK), etc
+  - [ ] Upload de imagens 
+  - [ ] Restringir o upload de imagens aos seguintes formatos: PNG e JPG
