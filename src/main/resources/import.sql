@@ -7,15 +7,15 @@ INSERT INTO tb_ingrediente (nome, unidade_de_medida, preco_unitario) VALUES ('ov
 INSERT INTO tb_ingrediente (nome, unidade_de_medida, preco_unitario) VALUES ('chocolate em pó', 'g', 15);
 INSERT INTO tb_ingrediente (nome, unidade_de_medida, preco_unitario) VALUES ('essencia de baunilha', 'ml', 6);
 
-INSERT INTO tb_componente (produto_id, ingrediente_id) VALUES (1, 1);
-INSERT INTO tb_componente (produto_id, ingrediente_id) VALUES (1, 2);
-INSERT INTO tb_componente (produto_id, ingrediente_id) VALUES (1, 3);
-INSERT INTO tb_componente (produto_id, ingrediente_id) VALUES (1, 4);
+INSERT INTO tb_componente (produto_id, ingrediente_id, quantidade) VALUES (1, 1, 200);
+INSERT INTO tb_componente (produto_id, ingrediente_id, quantidade) VALUES (1, 2, 150);
+INSERT INTO tb_componente (produto_id, ingrediente_id, quantidade) VALUES (1, 3, 66);
+INSERT INTO tb_componente (produto_id, ingrediente_id, quantidade) VALUES (1, 4, 70);
 
-INSERT INTO tb_componente (produto_id, ingrediente_id) VALUES (2, 1);
-INSERT INTO tb_componente (produto_id, ingrediente_id) VALUES (2, 2);
-INSERT INTO tb_componente (produto_id, ingrediente_id) VALUES (2, 3);
-INSERT INTO tb_componente (produto_id, ingrediente_id) VALUES (2, 5);
+INSERT INTO tb_componente (produto_id, ingrediente_id, quantidade) VALUES (2, 1, 200);
+INSERT INTO tb_componente (produto_id, ingrediente_id, quantidade) VALUES (2, 2, 150);
+INSERT INTO tb_componente (produto_id, ingrediente_id, quantidade) VALUES (2, 3, 66);
+INSERT INTO tb_componente (produto_id, ingrediente_id, quantidade) VALUES (2, 5, 5);
 
 INSERT INTO tb_user (name, email, password) VALUES ('Dono da cafeteria', 'dono@cafeteria.com', '$2a$10$eACCYoNOHEqXve8aIWT8Nu3PkMXWBaOxJ9aORUYzfMQCbVBIhZ8tG');
 INSERT INTO tb_user (name, email, password) VALUES ('Operador 01', 'operador01@cafeteria.com', '$2a$10$eACCYoNOHEqXve8aIWT8Nu3PkMXWBaOxJ9aORUYzfMQCbVBIhZ8tG');
