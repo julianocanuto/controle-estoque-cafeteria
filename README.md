@@ -15,7 +15,7 @@ O estoque nada mais é que controlar **quantos ingredientes tem na loja**, além
 Para organizar melhor crie uma estrutura de **ingrediente com nome, unidade de medida e preço unitario**.
 
 Antes de ter um estoque você precisa **ter um produto** com algumas coisas basicas que o cliente precisa saber como: **nome, imagem, preço e os ingredientes** que esse produto tem. 
-Porém temos um problema aqui, **o ingrediente é só uma referencia ao que foi usado ele não tem quantidade**, então você precisa fazer um **novo objeto que faça referência a esse ingrediente com a quantidade que é usado, nós chamamos de componente.**
+Porém temos um problema aqui, **o ingrediente é só uma referencia ao que foi usado ele não tem quantidade**, então você precisa **fazer um novo objeto que faça referência a esse ingrediente com a quantidade que é usado, nós chamamos de componente.**
 
 Agora você já tem as informações basicas para controlar o estoque, **organize em um objeto para que o cliente consiga visualizar os ingredientes da loja e quanto tem de estoque atualmente.**
 
@@ -30,7 +30,7 @@ Como você não tem acesso ao PDV **faça uma rota de controle manual para o don
 > (...) faça uma rota de controle manual para o dono da loja imputar os valores do estoque.
 
 O dono é quem cadastra todas as informações da loja, inclusive o upload da imagem, então **será necessario uma rota para CRUD dessas informações.**
-Além disso alterar as informações é restrito então essas rotas especificas precisa de um login para controlar.
+Além disso **alterar as informações é restrito** então essas **rotas especificas precisa de um login para controlar**.
 
 > (...) cadastra todas as informações da loja (...) será necessario uma rota para CRUD dessas informações.
 
@@ -54,3 +54,25 @@ Situação resolvida, agora o cliente pediu novas alterações, como sempre. **E
 - Upload de imagens (deixar somente PNG e JPG)
 
 *Lembrando que os diferenciais são algo a mais, então só faça caso ja tenha conhecimento e esteja familiarizado.*
+
+# Tarefas
+
+- estruturar todo sistema de estoque e produtos
+  - quantos ingredientes tem na loja
+  - crie uma estrutura de ingrediente com nome, unidade de medida e preço unitario
+  - ter um produto (...) com: nome, imagem, preço e os ingredientes
+  - fazer um novo objeto que faça referência a esse ingrediente com a quantidade que é usado, nós chamamos de componente.
+  - organize em um objeto para que o cliente consiga visualizar os ingredientes da loja e quanto tem de estoque atualmente.
+  - faça uma rota de verificação para saber se o produto X pode ser vendido.
+  - faça uma rota de controle manual para o dono da loja imputar os valores do estoque.
+  - será necessario uma rota para CRUD dessas informações (informações da loja).
+  - alterar as informações é restrito
+  - rotas especificas precisa de um login para controlar
+  - relatório para saber o custo dos produtos
+  - Precisamos de uma rota que retorne todos os produtos e o custo de cada um.
+  - Validar todos os campos para ninguem quebrar a loja
+  - Login precisa ser criptografado a senha
+  - Documentar para entendimento do código. (comentar algumas coisas explicando)
+  - Tratar erros corretamente (404 para não encontrado), (200 | 202 para OK), etc
+  - Upload de imagens 
+  - Restringir o upload de imagens aos seguintes formatos: PNG e JPG
