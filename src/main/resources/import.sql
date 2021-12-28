@@ -16,3 +16,15 @@ INSERT INTO tb_componente (produto_id, ingrediente_id) VALUES (2, 1);
 INSERT INTO tb_componente (produto_id, ingrediente_id) VALUES (2, 2);
 INSERT INTO tb_componente (produto_id, ingrediente_id) VALUES (2, 3);
 INSERT INTO tb_componente (produto_id, ingrediente_id) VALUES (2, 5);
+
+INSERT INTO tb_user (name, email, password) VALUES ('Dono da cafeteria', 'dono@cafeteria.com', '$2a$10$eACCYoNOHEqXve8aIWT8Nu3PkMXWBaOxJ9aORUYzfMQCbVBIhZ8tG');
+INSERT INTO tb_user (name, email, password) VALUES ('Operador 01', 'operador01@cafeteria.com', '$2a$10$eACCYoNOHEqXve8aIWT8Nu3PkMXWBaOxJ9aORUYzfMQCbVBIhZ8tG');
+INSERT INTO tb_user (name, email, password) VALUES ('Operador 02', 'operador02@cafeteria.com', '$2a$10$eACCYoNOHEqXve8aIWT8Nu3PkMXWBaOxJ9aORUYzfMQCbVBIhZ8tG');
+
+INSERT INTO tb_role (authority) VALUES ('ROLE_ADMIN');
+INSERT INTO tb_role (authority) VALUES ('ROLE_OPERATOR');
+
+INSERT INTO tb_user_role (user_id, role_id) VALUES (1, 1);
+INSERT INTO tb_user_role (user_id, role_id) VALUES (1, 2);
+INSERT INTO tb_user_role (user_id, role_id) VALUES (2, 2);
+INSERT INTO tb_user_role (user_id, role_id) VALUES (3, 2);
