@@ -39,9 +39,7 @@ public class ProdutoService {
 	@Transactional
 	public ProdutoDTO insert(ProdutoDTO produtoDTO) {
 		Produto produto = new Produto();
-		produto.setNome(produtoDTO.getNome());
-		produto.setPreco(produtoDTO.getPreco());
-		produto.setImgUri(produtoDTO.getImgUri());
+		copyDtoToEntity(produtoDTO, produto);
 		produto = repository.save(produto);
 		return new ProdutoDTO(produto);
 	}
@@ -53,11 +51,15 @@ public class ProdutoService {
 	@Transactional
 	public ProdutoDTO update(Long id, ProdutoDTO produtoDTO) {
 		Produto produto = repository.getById(id);
-		produto.setNome(produtoDTO.getNome());
-		produto.setPreco(produtoDTO.getPreco());
-		produto.setImgUri(produtoDTO.getImgUri());
+		copyDtoToEntity(produtoDTO, produto);
 		produto = repository.save(produto);
 		return new ProdutoDTO(produto);
+	}
+
+	private void copyDtoToEntity(ProdutoDTO dto, Produto entity) {
+		entity.setNome(dto.getNome());
+		entity.setPreco(dto.getPreco());
+		entity.setImgUri(dto.getImgUri());
 	}
 
 }
