@@ -75,7 +75,7 @@ Situação resolvida, agora o cliente pediu novas alterações, como sempre. **E
   - [ ] rotas especificas precisa de um login para controlar
   - [ ] relatório para saber o custo dos produtos
   - [ ] Precisamos de uma rota que retorne todos os produtos e o custo de cada um.
-  - [ ] Validar todos os campos para ninguem quebrar a loja
+  - [x] Validar todos os campos para ninguem quebrar a loja
   - [ ] Login precisa ser criptografado a senha
   - [ ] Documentar para entendimento do código. (comentar algumas coisas explicando)
   - [ ] Tratar erros corretamente (404 para não encontrado), (200 | 202 para OK), etc
