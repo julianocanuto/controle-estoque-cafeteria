@@ -55,6 +55,11 @@ Situação resolvida, agora o cliente pediu novas alterações, como sempre. **E
 
 *Lembrando que os diferenciais são algo a mais, então só faça caso ja tenha conhecimento e esteja familiarizado.*
 
+# Modelagem do sistema
+## Diagrama de classes
+![javaw_SKR3vfNsaN](https://user-images.githubusercontent.com/17866411/147617016-7c4ba44e-1b72-4c63-a7e6-638faafd7a88.png)
+
+
 # Tarefas
 
 - estruturar todo sistema de estoque e produtos
