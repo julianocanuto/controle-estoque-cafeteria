@@ -2,6 +2,7 @@ package com.julianocanuto.controleestoque.services;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -25,6 +26,14 @@ public class ProdutoService {
 			listDTO.add(new ProdutoDTO(produto));
 		}
 		return listDTO;
+	}
+
+	@Transactional(readOnly = true)
+	public ProdutoDTO findById(Long id) {
+		Optional<Produto> obj = repository.findById(id);
+		Produto entity = obj.get();
+		ProdutoDTO produtoDTO = new ProdutoDTO(entity);
+		return produtoDTO;
 	}
 
 }
