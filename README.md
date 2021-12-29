@@ -63,7 +63,7 @@ Situação resolvida, agora o cliente pediu novas alterações, como sempre. **E
 # Tarefas
 
 - estruturar todo sistema de estoque e produtos
-  - [ ] quantos ingredientes tem na loja
+  - [x] quantos ingredientes tem na loja
   - [x] crie uma estrutura de ingrediente com nome, unidade de medida e preço unitario
   - [x] ter um produto (...) com: nome, imagem, preço e os ingredientes
   - [ ] fazer um novo objeto que faça referência a esse ingrediente com a quantidade que é usado, nós chamamos de componente.
