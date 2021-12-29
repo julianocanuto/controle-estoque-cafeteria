@@ -8,8 +8,11 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
+import com.julianocanuto.controleestoque.dto.IngredienteDTO;
 import com.julianocanuto.controleestoque.dto.ProdutoDTO;
+import com.julianocanuto.controleestoque.entidades.Ingrediente;
 import com.julianocanuto.controleestoque.entidades.Produto;
+import com.julianocanuto.controleestoque.repositorios.IngredienteRepository;
 import com.julianocanuto.controleestoque.repositorios.ProdutoRepository;
 
 @Service
@@ -17,6 +20,9 @@ public class ProdutoService {
 
 	@Autowired
 	ProdutoRepository repository;
+	
+	@Autowired
+	IngredienteRepository ingredienteRepository;
 
 	@Transactional(readOnly = true)
 	public List<ProdutoDTO> findAll() {
@@ -60,6 +66,12 @@ public class ProdutoService {
 		entity.setNome(dto.getNome());
 		entity.setPreco(dto.getPreco());
 		entity.setImgUri(dto.getImgUri());
+		
+		entity.getIngredientes().clear();
+		for(IngredienteDTO ingredienteDTO : dto.getIngredientes()) {
+			Ingrediente ingrediente = ingredienteRepository.getById(ingredienteDTO.getId());
+			entity.getIngredientes().add(ingrediente);
+		}
 	}
 
 }
