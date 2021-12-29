@@ -1,6 +1,8 @@
 package com.julianocanuto.controleestoque.dto;
 
 import java.io.Serializable;
+import java.util.HashSet;
+import java.util.Set;
 
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.Positive;
@@ -20,6 +22,8 @@ public class ProdutoDTO implements Serializable {
 	
 	@Positive(message = "O preço deve ser um valor positivo")
 	private Double preco;
+	
+	private Set<IngredienteDTO> ingredientes = new HashSet<>();
 
 	public ProdutoDTO() {
 
@@ -37,6 +41,7 @@ public class ProdutoDTO implements Serializable {
 		this.nome = entity.getNome();
 		this.imgUri = entity.getImgUri();
 		this.preco = entity.getPreco();
+		entity.getIngredientes().forEach(ingrediente -> this.ingredientes.add(new IngredienteDTO(ingrediente)));
 	}
 
 	public Long getId() {
