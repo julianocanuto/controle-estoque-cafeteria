@@ -1,6 +1,7 @@
 package com.julianocanuto.controleestoque.entidades;
 
 import java.io.Serializable;
+import java.util.HashSet;
 import java.util.Objects;
 import java.util.Set;
 
@@ -30,7 +31,7 @@ public class Produto implements Serializable {
 	@JoinTable(name = "tb_componente",
 		joinColumns = @JoinColumn(name = "produto_id"),
 		inverseJoinColumns = @JoinColumn(name = "ingrediente_id"))
-	private Set<Ingrediente> ingredientes;
+	private Set<Ingrediente> ingredientes = new HashSet<>();
 
 	public Produto() {
 
