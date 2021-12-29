@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.julianocanuto.controleestoque.entidades.Produto;
+import com.julianocanuto.controleestoque.dto.ProdutoDTO;
 import com.julianocanuto.controleestoque.services.ProdutoService;
 
 @RestController
@@ -19,8 +19,8 @@ public class ProdutoResource {
 	private ProdutoService service;
 
 	@GetMapping
-	public ResponseEntity<List<Produto>> findAll(){
-		List<Produto> list = service.findAll();
+	public ResponseEntity<List<ProdutoDTO>> findAll(){
+		List<ProdutoDTO> list = service.findAll();
 		return ResponseEntity.ok().body(list);
 	}
 }
