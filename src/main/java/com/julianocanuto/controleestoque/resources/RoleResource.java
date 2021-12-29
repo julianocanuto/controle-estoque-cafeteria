@@ -1,14 +1,14 @@
 package com.julianocanuto.controleestoque.resources;
 
-import java.util.List;
-
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.julianocanuto.controleestoque.entidades.Role;
+import com.julianocanuto.controleestoque.dto.RoleDTO;
 import com.julianocanuto.controleestoque.services.RoleService;
 
 @RestController
@@ -19,8 +19,8 @@ public class RoleResource {
 	private RoleService service;
 
 	@GetMapping
-	public ResponseEntity<List<Role>> findAll(){
-		List<Role> list = service.findAll();
+	public ResponseEntity<Page<RoleDTO>> findAllPaged(Pageable pageable){
+		Page<RoleDTO> list = service.findAllPaged(pageable);
 		return ResponseEntity.ok().body(list);
 	}
 }
