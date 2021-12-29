@@ -1,13 +1,17 @@
 package com.julianocanuto.controleestoque.resources;
 
+import java.net.URI;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.servlet.support.ServletUriComponentsBuilder;
 
 import com.julianocanuto.controleestoque.dto.ProdutoDTO;
 import com.julianocanuto.controleestoque.services.ProdutoService;
@@ -29,5 +33,12 @@ public class ProdutoResource {
 	public ResponseEntity<ProdutoDTO> findById(@PathVariable Long id){
 		ProdutoDTO produtoDTO = service.findById(id);
 		return ResponseEntity.ok().body(produtoDTO);
+	}
+	
+	@PostMapping
+	public ResponseEntity<ProdutoDTO> insert(@RequestBody ProdutoDTO produtoDTO){
+		produtoDTO = service.insert(produtoDTO);
+		URI uri = ServletUriComponentsBuilder.fromCurrentRequest().path("/{id}").buildAndExpand(produtoDTO.getId()).toUri();
+		return ResponseEntity.created(uri).body(produtoDTO);
 	}
 }

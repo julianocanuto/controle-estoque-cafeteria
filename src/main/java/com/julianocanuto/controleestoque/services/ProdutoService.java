@@ -35,5 +35,15 @@ public class ProdutoService {
 		ProdutoDTO produtoDTO = new ProdutoDTO(entity);
 		return produtoDTO;
 	}
+	
+	@Transactional
+	public ProdutoDTO insert(ProdutoDTO produtoDTO) {
+		Produto produto = new Produto();
+		produto.setNome(produtoDTO.getNome());
+		produto.setPreco(produtoDTO.getPreco());
+		produto.setImgUri(produtoDTO.getImgUri());
+		produto = repository.save(produto);
+		return new ProdutoDTO(produto);
+	}
 
 }
