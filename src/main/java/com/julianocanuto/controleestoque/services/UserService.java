@@ -7,6 +7,7 @@ import java.util.stream.Collectors;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
+import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
@@ -20,6 +21,9 @@ import com.julianocanuto.controleestoque.repositorios.UserRepository;
 @Service
 public class UserService {
 
+	@Autowired
+	private BCryptPasswordEncoder passwordEncoder;
+	
 	@Autowired
 	UserRepository repository;
 
@@ -72,7 +76,7 @@ public class UserService {
 	private void copyDtoToEntity(UserDTO dto, User entity) {
 		entity.setName(dto.getName());
 		entity.setEmail(dto.getEmail());
-		entity.setPassword(dto.getPassword());
+		entity.setPassword(passwordEncoder.encode(dto.getPassword()));
 		
 		entity.getRoles().clear();
 		for (RoleDTO roleDTO : dto.getRoles()) {
