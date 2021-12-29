@@ -49,5 +49,15 @@ public class ProdutoService {
 	public void delete(Long id) {
 		repository.deleteById(id);
 	}
+	
+	@Transactional
+	public ProdutoDTO update(Long id, ProdutoDTO produtoDTO) {
+		Produto produto = repository.getById(id);
+		produto.setNome(produtoDTO.getNome());
+		produto.setPreco(produtoDTO.getPreco());
+		produto.setImgUri(produtoDTO.getImgUri());
+		produto = repository.save(produto);
+		return new ProdutoDTO(produto);
+	}
 
 }
