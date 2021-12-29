@@ -76,4 +76,8 @@ public class ProdutoDTO implements Serializable {
 		this.preco = preco;
 	}
 
+	public Set<IngredienteDTO> getIngredientes() {
+		return ingredientes;
+	}
+
 }
