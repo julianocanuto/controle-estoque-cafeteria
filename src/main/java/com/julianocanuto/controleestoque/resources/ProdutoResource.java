@@ -3,6 +3,8 @@ package com.julianocanuto.controleestoque.resources;
 import java.net.URI;
 import java.util.List;
 
+import javax.validation.Valid;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.DeleteMapping;
@@ -38,14 +40,14 @@ public class ProdutoResource {
 	}
 	
 	@PostMapping
-	public ResponseEntity<ProdutoDTO> insert(@RequestBody ProdutoDTO produtoDTO){
+	public ResponseEntity<ProdutoDTO> insert(@Valid @RequestBody ProdutoDTO produtoDTO){
 		produtoDTO = service.insert(produtoDTO);
 		URI uri = ServletUriComponentsBuilder.fromCurrentRequest().path("/{id}").buildAndExpand(produtoDTO.getId()).toUri();
 		return ResponseEntity.created(uri).body(produtoDTO);
 	}
 	
 	@PutMapping(value = "/{id}")
-	public ResponseEntity<ProdutoDTO> update(@PathVariable Long id, @RequestBody ProdutoDTO produtoDTO) {
+	public ResponseEntity<ProdutoDTO> update(@PathVariable Long id, @Valid @RequestBody ProdutoDTO produtoDTO) {
 		produtoDTO = service.update(id, produtoDTO);
 
 		return ResponseEntity.ok().body(produtoDTO);

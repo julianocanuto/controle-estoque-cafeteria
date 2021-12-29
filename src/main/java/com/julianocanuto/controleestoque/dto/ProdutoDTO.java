@@ -2,14 +2,23 @@ package com.julianocanuto.controleestoque.dto;
 
 import java.io.Serializable;
 
+import javax.validation.constraints.NotBlank;
+import javax.validation.constraints.Positive;
+import javax.validation.constraints.Size;
+
 import com.julianocanuto.controleestoque.entidades.Produto;
 
 public class ProdutoDTO implements Serializable {
 	private static final long serialVersionUID = 1L;
 
 	private Long id;
+	
+	@Size(min = 3, message = "O nome do produto deve possuir pelo menos 3 caracteres")
+	@NotBlank(message = "Campo de preenchimento obrigatório")
 	private String nome;
 	private String imgUri;
+	
+	@Positive(message = "O preço deve ser um valor positivo")
 	private Double preco;
 
 	public ProdutoDTO() {
