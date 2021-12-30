@@ -13,6 +13,7 @@ import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.JoinTable;
 import javax.persistence.ManyToMany;
+import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 
 @Entity
@@ -26,6 +27,10 @@ public class Produto implements Serializable {
 	private String nome;
 	private String imgUri;
 	private Double preco;
+	
+	@ManyToOne
+	@JoinColumn(name = "estoque_id")
+	private Estoque estoque;
 	
 	@ManyToMany(fetch = FetchType.EAGER)
 	@JoinTable(name = "tb_componente",
