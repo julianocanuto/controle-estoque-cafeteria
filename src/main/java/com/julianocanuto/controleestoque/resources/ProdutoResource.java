@@ -18,7 +18,6 @@ import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.servlet.support.ServletUriComponentsBuilder;
 
 import com.julianocanuto.controleestoque.dto.ProdutoDTO;
-import com.julianocanuto.controleestoque.dto.ProdutoNomeQuantidadeDTO;
 import com.julianocanuto.controleestoque.services.ProdutoService;
 
 @RestController
@@ -32,12 +31,6 @@ public class ProdutoResource {
 	public ResponseEntity<List<ProdutoDTO>> findAll(){
 		List<ProdutoDTO> list = service.findAll();
 		return ResponseEntity.ok().body(list);
-	}
-	
-	@GetMapping(value = "/estoque")
-	public ResponseEntity<List<ProdutoNomeQuantidadeDTO>> getNomeQuantidadeProdutos(){
-		List<ProdutoNomeQuantidadeDTO> listDto = service.getNomeQuantidadeProdutos();
-		return ResponseEntity.ok().body(listDto);
 	}
 	
 	@GetMapping(value = "/{id}")
