@@ -29,8 +29,19 @@ INSERT INTO tb_user_role (user_id, role_id) VALUES (1, 2);
 INSERT INTO tb_user_role (user_id, role_id) VALUES (2, 2);
 INSERT INTO tb_user_role (user_id, role_id) VALUES (3, 2);
 
-INSERT INTO tb_estoque (id, quantidade) VALUES (1, 5);
-INSERT INTO tb_estoque (id, quantidade) VALUES (2, 3);
+INSERT INTO tb_estoque (quantidade) VALUES (5);
+INSERT INTO tb_estoque (quantidade) VALUES (3);
+INSERT INTO tb_estoque (quantidade) VALUES (12000);
+INSERT INTO tb_estoque (quantidade) VALUES (7000);
+INSERT INTO tb_estoque (quantidade) VALUES (30);
+INSERT INTO tb_estoque (quantidade) VALUES (1000);
+INSERT INTO tb_estoque (quantidade) VALUES (200);
 
 UPDATE tb_produto SET estoque_id = 1 WHERE id = 1;
 UPDATE tb_produto SET estoque_id = 2 WHERE id = 2;
+
+UPDATE tb_ingrediente SET estoque_id = 3 WHERE id = 1;
+UPDATE tb_ingrediente SET estoque_id = 4 WHERE id = 2;
+UPDATE tb_ingrediente SET estoque_id = 5 WHERE id = 3;
+UPDATE tb_ingrediente SET estoque_id = 6 WHERE id = 4;
+UPDATE tb_ingrediente SET estoque_id = 7 WHERE id = 5;
