@@ -79,7 +79,6 @@ Situação resolvida, agora o cliente pediu novas alterações, como sempre. **E
     - [ ] PUT
     - [ ] POST
     - [ ] DELETE
-  - [ ] relatório para saber o custo dos produtos
   - [ ] Precisamos de uma rota que retorne todos os produtos e o custo de cada um.
   - [x] Validar todos os campos para ninguem quebrar a loja
   - [x] Login precisa ser criptografado a senha
