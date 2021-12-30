@@ -91,3 +91,8 @@ Situação resolvida, agora o cliente pediu novas alterações, como sempre. **E
   - [ ] Tratar erros corretamente (404 para não encontrado), (200 | 202 para OK), etc
   - [ ] Upload de imagens 
   - [ ] Restringir o upload de imagens aos seguintes formatos: PNG e JPG
+
+# Referências
+
+1. https://vladmihalcea.com/the-best-way-to-map-a-onetomany-association-with-jpa-and-hibernate/
+2. https://www.baeldung.com/spring-data-jpa-projections
