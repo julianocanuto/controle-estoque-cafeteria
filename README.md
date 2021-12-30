@@ -57,7 +57,7 @@ Situação resolvida, agora o cliente pediu novas alterações, como sempre. **E
 
 # Modelagem do sistema
 ## Diagrama de classes
-![javaw_SKR3vfNsaN](https://user-images.githubusercontent.com/17866411/147617016-7c4ba44e-1b72-4c63-a7e6-638faafd7a88.png)
+![javaw_duTXnkqpwg](https://user-images.githubusercontent.com/17866411/147786179-71ff7ae6-8302-4c75-b8ee-f40ed57688c4.png)
 
 
 # Tarefas
