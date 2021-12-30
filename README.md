@@ -75,11 +75,7 @@ Situação resolvida, agora o cliente pediu novas alterações, como sempre. **E
     - [x] CRUD Produto
     - [x] CRUD Ingrediente
     - [ ] Componente
-  - [ ] alterar as informações é restrito
-    - [ ] PUT
-    - [ ] POST
-    - [ ] DELETE
-  - [ ] rotas especificas precisa de um login para controlar
+  - [ ] alterar as informações é restrito (...) precisa de um login para controlar
     - [ ] PUT
     - [ ] POST
     - [ ] DELETE
