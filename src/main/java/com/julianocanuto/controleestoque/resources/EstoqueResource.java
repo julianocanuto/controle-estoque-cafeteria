@@ -38,7 +38,7 @@ public class EstoqueResource {
 		return ResponseEntity.ok().body(listDto);
 	}
 
-	@PostMapping(value = "/produtos/{idProduto}")
+	@GetMapping(value = "/produtos/{idProduto}")
 	public ResponseEntity<Boolean> podeSerVendido(@PathVariable Long idProduto,
 			@RequestParam("quantidadeDesejada") Integer quantidadeDesejada) {
 		Boolean podeSerVendido = false;
