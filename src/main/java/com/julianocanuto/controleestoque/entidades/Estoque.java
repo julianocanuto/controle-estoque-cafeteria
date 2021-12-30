@@ -23,6 +23,10 @@ public class Estoque implements Serializable {
 
 	@OneToMany(mappedBy = "estoque")
 	private List<Produto> produtosEmEstoque = new ArrayList<>();
+	
+	@OneToMany(mappedBy = "estoque")
+	private List<Ingrediente> ingredientesEmEstoque = new ArrayList<>();
+	
 	private Integer quantidade;
 
 	public Estoque() {
