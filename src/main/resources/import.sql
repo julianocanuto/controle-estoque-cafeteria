@@ -28,3 +28,9 @@ INSERT INTO tb_user_role (user_id, role_id) VALUES (1, 1);
 INSERT INTO tb_user_role (user_id, role_id) VALUES (1, 2);
 INSERT INTO tb_user_role (user_id, role_id) VALUES (2, 2);
 INSERT INTO tb_user_role (user_id, role_id) VALUES (3, 2);
+
+INSERT INTO tb_estoque (id, quantidade) VALUES (1, 5);
+INSERT INTO tb_estoque (id, quantidade) VALUES (2, 3);
+
+UPDATE tb_produto SET estoque_id = 1 WHERE id = 1;
+UPDATE tb_produto SET estoque_id = 2 WHERE id = 2;
