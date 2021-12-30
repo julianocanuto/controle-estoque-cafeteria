@@ -11,7 +11,9 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
+import com.julianocanuto.controleestoque.dto.IngredienteIdNomeQuantidadeDTO;
 import com.julianocanuto.controleestoque.dto.ProdutoNomeQuantidadeDTO;
+import com.julianocanuto.controleestoque.services.IngredienteService;
 import com.julianocanuto.controleestoque.services.ProdutoService;
 
 @RestController
@@ -20,10 +22,19 @@ public class EstoqueResource {
 
 	@Autowired
 	private ProdutoService service;
+	
+	@Autowired
+	private IngredienteService ingredienteService;
 
 	@GetMapping(value = "/produtos")
 	public ResponseEntity<List<ProdutoNomeQuantidadeDTO>> getNomeQuantidadeProdutos() {
 		List<ProdutoNomeQuantidadeDTO> listDto = service.getNomeQuantidadeProdutos();
+		return ResponseEntity.ok().body(listDto);
+	}
+	
+	@GetMapping(value = "/ingredientes")
+	public ResponseEntity<List<IngredienteIdNomeQuantidadeDTO>> getIdNomeQuantidadeIngredientes() {
+		List<IngredienteIdNomeQuantidadeDTO> listDto = ingredienteService.getIdNomeQuantidadeIngredientes();
 		return ResponseEntity.ok().body(listDto);
 	}
 
