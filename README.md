@@ -67,7 +67,7 @@ Situação resolvida, agora o cliente pediu novas alterações, como sempre. **E
   - [x] crie uma estrutura de ingrediente com nome, unidade de medida e preço unitario
   - [x] ter um produto (...) com: nome, imagem, preço e os ingredientes
   - [ ] fazer um **novo objeto** que faça referência a esse ingrediente com a quantidade que é usado, nós chamamos de componente. *(Caminho provável: novo DTO)*
-  - [ ] organize em **um objeto** para que o cliente consiga visualizar os ingredientes da loja e quanto tem de estoque atualmente.*(Caminho provável: novo DTO)*
+  - [x] organize em **um objeto** para que o cliente consiga visualizar os ingredientes da loja e quanto tem de estoque atualmente.*(Caminho provável: novo DTO)*
   - [x] faça uma rota de verificação para saber se o produto X pode ser vendido.
     - Consideração: Se o produto possui a quantidade desejada no estoque, logo, pode ser pedido.
   - [ ] faça uma rota de controle manual para o dono da loja imputar os valores do estoque.
