@@ -13,7 +13,7 @@ import com.julianocanuto.controleestoque.repositorios.projections.IngredienteIdN
 public interface IngredienteRepository extends JpaRepository<Ingrediente, Long>{
 
 	@Query(nativeQuery = true,
-			value = "SELECT TB_INGREDIENTE.id TB_INGREDIENTE.nome, TB_ESTOQUE.quantidade "
+			value = "SELECT TB_INGREDIENTE.id, TB_INGREDIENTE.nome, TB_ESTOQUE.quantidade "
 					+ "FROM TB_INGREDIENTE "
 					+ "INNER JOIN TB_ESTOQUE ON TB_INGREDIENTE.estoque_id = TB_ESTOQUE.id")
 	List<IngredienteIdNomeQuantidadeProjection> getIdNomeQuantidadeIngredientes();
