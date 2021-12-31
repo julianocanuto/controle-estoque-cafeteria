@@ -88,6 +88,7 @@ Situação resolvida, agora o cliente pediu novas alterações, como sempre. **E
   - [x] Login precisa ser criptografado a senha
   - [ ] Documentar para entendimento do código. (comentar algumas coisas explicando)
   - [ ] Tratar erros corretamente (404 para não encontrado), (200 | 202 para OK), etc
+    - [x] p/ CRUD User
   - [ ] Upload de imagens 
   - [ ] Restringir o upload de imagens aos seguintes formatos: PNG e JPG
 
