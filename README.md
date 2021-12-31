@@ -59,7 +59,8 @@ Situação resolvida, agora o cliente pediu novas alterações, como sempre. **E
 ## Diagrama de classes
 ![javaw_duTXnkqpwg](https://user-images.githubusercontent.com/17866411/147786179-71ff7ae6-8302-4c75-b8ee-f40ed57688c4.png)
 
-
+## Coleção do Postman
+- https://www.postman.com/julianocanuto/workspace/controle-estoque-cafeteria/collection/18955527-7e121b86-5418-4e50-bcfd-a1d9e71e3ac6
 # Tarefas
 
 - estruturar todo sistema de estoque e produtos
