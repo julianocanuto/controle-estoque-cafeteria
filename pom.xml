@@ -11,9 +11,9 @@
 	</parent>
 	<groupId>com.julianocanuto</groupId>
 	<artifactId>controleestoque</artifactId>
-	<version>0.0.1-SNAPSHOT</version>
+	<version>1.0.0</version>
 	<name>controleestoque</name>
-	<description>Demo project for Spring Boot</description>
+	<description>Controle de estoque para cafeteria</description>
 	<properties>
 		<java.version>11</java.version>
 		<spring-cloud.version>Hoxton.SR8</spring-cloud.version>
