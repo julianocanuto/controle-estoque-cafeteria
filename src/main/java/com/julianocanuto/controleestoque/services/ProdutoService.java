@@ -10,12 +10,14 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 import com.julianocanuto.controleestoque.dto.IngredienteDTO;
+import com.julianocanuto.controleestoque.dto.ProdutoComIngredientesEMedidasParaCustoDTO;
 import com.julianocanuto.controleestoque.dto.ProdutoDTO;
 import com.julianocanuto.controleestoque.dto.ProdutoNomeQuantidadeDTO;
 import com.julianocanuto.controleestoque.entidades.Ingrediente;
 import com.julianocanuto.controleestoque.entidades.Produto;
 import com.julianocanuto.controleestoque.repositorios.IngredienteRepository;
 import com.julianocanuto.controleestoque.repositorios.ProdutoRepository;
+import com.julianocanuto.controleestoque.repositorios.projections.ProdutoComIngredientesEMedidasParaCustoProjection;
 import com.julianocanuto.controleestoque.repositorios.projections.ProdutoNomeQuantidadeProjection;
 
 @Service
@@ -41,6 +43,13 @@ public class ProdutoService {
 	public List<ProdutoNomeQuantidadeDTO> getNomeQuantidadeProdutos() {
 		List<ProdutoNomeQuantidadeProjection> list = repository.getNomeQuantidadeProdutos();
 		List<ProdutoNomeQuantidadeDTO> listDto = list.stream().map(x -> new ProdutoNomeQuantidadeDTO(x)).collect(Collectors.toList());
+		return listDto;
+	}
+	
+	@Transactional(readOnly = true)
+	public List<ProdutoComIngredientesEMedidasParaCustoDTO> getProdutoComIngredientesEMedidasParaCusto() {
+		List<ProdutoComIngredientesEMedidasParaCustoProjection> list = repository.getProdutoComIngredientesEMedidasParaCusto();
+		List<ProdutoComIngredientesEMedidasParaCustoDTO> listDto = list.stream().map(x -> new ProdutoComIngredientesEMedidasParaCustoDTO(x)).collect(Collectors.toList());
 		return listDto;
 	}
 

@@ -11,6 +11,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.julianocanuto.controleestoque.dto.IngredienteIdNomeQuantidadeDTO;
+import com.julianocanuto.controleestoque.dto.ProdutoComIngredientesEMedidasParaCustoDTO;
 import com.julianocanuto.controleestoque.dto.ProdutoNomeQuantidadeDTO;
 import com.julianocanuto.controleestoque.services.IngredienteService;
 import com.julianocanuto.controleestoque.services.ProdutoService;
@@ -28,6 +29,12 @@ public class EstoqueResource {
 	@GetMapping(value = "/produtos")
 	public ResponseEntity<List<ProdutoNomeQuantidadeDTO>> getNomeQuantidadeProdutos() {
 		List<ProdutoNomeQuantidadeDTO> listDto = service.getNomeQuantidadeProdutos();
+		return ResponseEntity.ok().body(listDto);
+	}
+	
+	@GetMapping(value = "/produtos/custo")
+	public ResponseEntity<List<ProdutoComIngredientesEMedidasParaCustoDTO>> getCustoDosProdutos() {
+		List<ProdutoComIngredientesEMedidasParaCustoDTO> listDto = service.getProdutoComIngredientesEMedidasParaCusto();
 		return ResponseEntity.ok().body(listDto);
 	}
 	
