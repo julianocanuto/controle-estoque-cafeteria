@@ -13,6 +13,7 @@ import org.springframework.web.bind.annotation.RestController;
 import com.julianocanuto.controleestoque.dto.IngredienteIdNomeQuantidadeDTO;
 import com.julianocanuto.controleestoque.dto.ProdutoComIngredientesEMedidasParaCustoDTO;
 import com.julianocanuto.controleestoque.dto.ProdutoNomeQuantidadeDTO;
+import com.julianocanuto.controleestoque.dto.ProdutoVendavelDTO;
 import com.julianocanuto.controleestoque.services.IngredienteService;
 import com.julianocanuto.controleestoque.services.ProdutoService;
 
@@ -45,9 +46,10 @@ public class EstoqueResource {
 	}
 
 	@GetMapping(value = "/produtos/{idProduto}")
-	public ResponseEntity<Boolean> podeSerVendido(@PathVariable Long idProduto,
+	public ResponseEntity<ProdutoVendavelDTO> podeSerVendido(@PathVariable Long idProduto,
 			@RequestParam("quantidadeDesejada") Integer quantidadeDesejada) {
-		Boolean podeSerVendido = false;
+		
+		ProdutoVendavelDTO podeSerVendido = new ProdutoVendavelDTO(false);
 		ProdutoNomeQuantidadeDTO produtoDesejado = new ProdutoNomeQuantidadeDTO();
 		List<ProdutoNomeQuantidadeDTO> listDto = service.getNomeQuantidadeProdutos();
 		for (ProdutoNomeQuantidadeDTO produto : listDto) {
@@ -56,7 +58,7 @@ public class EstoqueResource {
 			}
 		}
 		if (produtoDesejado.getQuantidade() >= quantidadeDesejada) {
-			podeSerVendido = true;
+			podeSerVendido.setIsVendavel(true);
 		}
 
 		return ResponseEntity.ok().body(podeSerVendido);
