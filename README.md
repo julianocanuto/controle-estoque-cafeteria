@@ -67,30 +67,37 @@ Situação resolvida, agora o cliente pediu novas alterações, como sempre. **E
 # Tarefas
 
 - estruturar todo sistema de estoque e produtos
-  - [x] quantos ingredientes tem na loja
-  - [x] crie uma estrutura de ingrediente com nome, unidade de medida e preço unitario
-  - [x] ter um produto (...) com: nome, imagem, preço e os ingredientes
-  - [ ] fazer um **novo objeto** que faça referência a esse ingrediente com a quantidade que é usado, nós chamamos de componente. *(Caminho provável: novo DTO)*
-  - [x] organize em **um objeto** para que o cliente consiga visualizar os ingredientes da loja e quanto tem de estoque atualmente.*(Caminho provável: novo DTO)*
-  - [x] faça uma rota de verificação para saber se o produto X pode ser vendido.
+  - [ ] fazer um **novo objeto** que faça referência a esse ingrediente com a quantidade que é usado, nós chamamos de componente.
     - Consideração: Se o produto possui a quantidade desejada no estoque, logo, pode ser pedido.
   - [ ] faça uma rota de controle manual para o dono da loja imputar os valores do estoque.
   - [ ] será necessario uma rota para CRUD dessas informações (informações da loja).
-    - [x] CRUD Produto
-    - [x] CRUD Ingrediente
     - [ ] Componente
   - [ ] alterar as informações é restrito (...) precisa de um login para controlar
     - [ ] PUT
     - [ ] POST
     - [ ] DELETE
   - [ ] Precisamos de uma rota que retorne todos os produtos e o custo de cada um.
-  - [x] Validar todos os campos para ninguem quebrar a loja
-  - [x] Login precisa ser criptografado a senha
   - [ ] Documentar para entendimento do código. (comentar algumas coisas explicando)
   - [ ] Tratar erros corretamente (404 para não encontrado), (200 | 202 para OK), etc
-    - [x] p/ CRUD User
   - [ ] Upload de imagens 
   - [ ] Restringir o upload de imagens aos seguintes formatos: PNG e JPG
+
+# Notas de versão
+## v1.0.0
+- estruturar todo sistema de estoque e produtos
+  - [x] quantos ingredientes tem na loja
+  - [x] crie uma estrutura de ingrediente com nome, unidade de medida e preço unitario
+  - [x] ter um produto (...) com: nome, imagem, preço e os ingredientes
+  - [x] organize em **um objeto** para que o cliente consiga visualizar os ingredientes da loja e quanto tem de estoque atualmente.
+  - [x] faça uma rota de verificação para saber se o produto X pode ser vendido.
+    - Consideração: Se o produto possui a quantidade desejada no estoque, logo, pode ser pedido.
+  - [x] será necessario uma rota para CRUD dessas informações (informações da loja).
+    - [x] CRUD Produto
+    - [x] CRUD Ingrediente
+  - [x] Validar todos os campos para ninguem quebrar a loja
+  - [x] Login precisa ser criptografado a senha
+  - [x] Tratar erros corretamente (404 para não encontrado), (200 | 202 para OK), etc
+    - [x] p/ CRUD User
 
 # Referências
 
