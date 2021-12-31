@@ -92,3 +92,4 @@ Situação resolvida, agora o cliente pediu novas alterações, como sempre. **E
 1. https://vladmihalcea.com/the-best-way-to-map-a-onetomany-association-with-jpa-and-hibernate/
 2. https://www.baeldung.com/spring-data-jpa-projections
 3. https://www.baeldung.com/spring-request-param
+4. https://www.restapitutorial.com/lessons/httpmethods.html
