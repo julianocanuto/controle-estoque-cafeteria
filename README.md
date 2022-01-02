@@ -68,7 +68,6 @@ Situação resolvida, agora o cliente pediu novas alterações, como sempre. **E
 
 - estruturar todo sistema de estoque e produtos
   - [ ] fazer um **novo objeto** que faça referência a esse ingrediente com a quantidade que é usado, nós chamamos de componente.
-    - Consideração: Se o produto possui a quantidade desejada no estoque, logo, pode ser pedido.
   - [ ] faça uma rota de controle manual para o dono da loja imputar os valores do estoque.
   - [ ] será necessario uma rota para CRUD dessas informações (informações da loja).
     - [ ] Componente
