@@ -32,5 +32,5 @@ INSERT INTO tb_user_role (user_id, role_id) VALUES (3, 2);
 INSERT INTO tb_estoque (id, estocavel_id, estocavel_tipo, estocavel_unidade_de_medida, operacao_no_estoque, quantidade) values (1, 1, 'produto', 'unidade', 'entrada', 5);
 INSERT INTO tb_estoque (id, estocavel_id, estocavel_tipo, estocavel_unidade_de_medida, operacao_no_estoque, quantidade) values (2, 2, 'produto', 'unidade', 'entrada', 3);
 INSERT INTO tb_estoque (id, estocavel_id, estocavel_tipo, estocavel_unidade_de_medida, operacao_no_estoque, quantidade) values (3, 3, 'produto', 'unidade', 'entrada', 2);
-INSERT INTO tb_estoque (id, estocavel_id, estocavel_tipo, estocavel_unidade_de_medida, operacao_no_estoque, quantidade) values (4, 1, 'ingrediente', 'unidade', 'entrada', 5000);
-INSERT INTO tb_estoque (id, estocavel_id, estocavel_tipo, estocavel_unidade_de_medida, operacao_no_estoque, quantidade) values (5, 1, 'ingrediente', 'unidade', 'saida', 2000);
+INSERT INTO tb_estoque (id, estocavel_id, estocavel_tipo, estocavel_unidade_de_medida, operacao_no_estoque, quantidade) values (4, 1, 'ingrediente', 'kg', 'entrada', 5000);
+INSERT INTO tb_estoque (id, estocavel_id, estocavel_tipo, estocavel_unidade_de_medida, operacao_no_estoque, quantidade) values (5, 1, 'ingrediente', 'kg', 'saida', -2000);
