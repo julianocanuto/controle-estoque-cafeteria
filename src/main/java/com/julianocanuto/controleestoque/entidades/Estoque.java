@@ -1,15 +1,12 @@
 package com.julianocanuto.controleestoque.entidades;
 
 import java.io.Serializable;
-import java.util.ArrayList;
-import java.util.List;
 import java.util.Objects;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
-import javax.persistence.OneToMany;
 import javax.persistence.Table;
 
 @Entity
@@ -20,17 +17,24 @@ public class Estoque implements Serializable {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
-
-	@OneToMany(mappedBy = "estoque")
-	private List<Produto> produtosEmEstoque = new ArrayList<>();
-	
-	@OneToMany(mappedBy = "estoque")
-	private List<Ingrediente> ingredientesEmEstoque = new ArrayList<>();
-	
-	private Integer quantidade;
+	private Long estocavelId;
+	private Double quantidade;
+	private String operacaoNoEstoque;
+	private String estocavelTipo;
+	private String estocavelUnidadeDeMedida;
 
 	public Estoque() {
 
+	}
+
+	public Estoque(Long id, Long estocavelId, Double quantidade, String operacaoNoEstoque, String estocavelTipo,
+			String estocavelUnidadeDeMedida) {
+		this.id = id;
+		this.estocavelId = estocavelId;
+		this.quantidade = quantidade;
+		this.operacaoNoEstoque = operacaoNoEstoque;
+		this.estocavelTipo = estocavelTipo;
+		this.estocavelUnidadeDeMedida = estocavelUnidadeDeMedida;
 	}
 
 	public Long getId() {
@@ -41,16 +45,51 @@ public class Estoque implements Serializable {
 		this.id = id;
 	}
 
-	public List<Produto> getProdutos() {
-		return produtosEmEstoque;
+	public Long getEstocavelId() {
+		return estocavelId;
 	}
 
-	public void setProdutos(List<Produto> produtos) {
-		this.produtosEmEstoque = produtos;
+	public void setEstocavelId(Long estocavelId) {
+		this.estocavelId = estocavelId;
 	}
 
-	public Integer getQuantidade() {
+	public Double getQuantidade() {
 		return quantidade;
+	}
+
+	public void setQuantidade(Double quantidade) {
+		this.quantidade = quantidade;
+	}
+
+	public String getOperacaoNoEstoque() {
+		return operacaoNoEstoque;
+	}
+
+	public void setOperacaoNoEstoque(String operacaoNoEstoque) {
+		this.operacaoNoEstoque = operacaoNoEstoque;
+	}
+
+	public String getEstocavelTipo() {
+		return estocavelTipo;
+	}
+
+	public void setEstocavelTipo(String estocavelTipo) {
+		this.estocavelTipo = estocavelTipo;
+	}
+
+	public String getEstocavelUnidadeDeMedida() {
+		return estocavelUnidadeDeMedida;
+	}
+
+	public void setEstocavelUnidadeDeMedida(String estocavelUnidadeDeMedida) {
+		this.estocavelUnidadeDeMedida = estocavelUnidadeDeMedida;
+	}
+
+	@Override
+	public String toString() {
+		return "Estoque [id=" + id + ", estocavelId=" + estocavelId + ", quantidade=" + quantidade
+				+ ", operacaoNoEstoque=" + operacaoNoEstoque + ", estocavelTipo=" + estocavelTipo
+				+ ", estocavelUnidadeDeMedida=" + estocavelUnidadeDeMedida + "]";
 	}
 
 	@Override
