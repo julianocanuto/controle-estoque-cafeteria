@@ -13,12 +13,11 @@ import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.JoinTable;
 import javax.persistence.ManyToMany;
-import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 
 @Entity
 @Table(name = "tb_produto")
-public class Produto implements Serializable {
+public class Produto extends Estocavel implements Serializable {
 	private static final long serialVersionUID = 1L;
 
 	@Id
@@ -27,10 +26,6 @@ public class Produto implements Serializable {
 	private String nome;
 	private String imgUri;
 	private Double preco;
-	
-	@ManyToOne
-	@JoinColumn(name = "estoque_id")
-	private Estoque estoque;
 	
 	@ManyToMany(fetch = FetchType.EAGER)
 	@JoinTable(name = "tb_componente",
@@ -104,6 +99,16 @@ public class Produto implements Serializable {
 			return false;
 		Produto other = (Produto) obj;
 		return Objects.equals(id, other.id);
+	}
+
+	@Override
+	public String getTipo() {
+		return "produto";
+	}
+
+	@Override
+	public String getUnidadeDeMedida() {
+		return "unidade";
 	}
 
 }
