@@ -29,19 +29,8 @@ INSERT INTO tb_user_role (user_id, role_id) VALUES (1, 2);
 INSERT INTO tb_user_role (user_id, role_id) VALUES (2, 2);
 INSERT INTO tb_user_role (user_id, role_id) VALUES (3, 2);
 
-INSERT INTO tb_estoque (quantidade) VALUES (5);
-INSERT INTO tb_estoque (quantidade) VALUES (3);
-INSERT INTO tb_estoque (quantidade) VALUES (12000);
-INSERT INTO tb_estoque (quantidade) VALUES (7000);
-INSERT INTO tb_estoque (quantidade) VALUES (30);
-INSERT INTO tb_estoque (quantidade) VALUES (1000);
-INSERT INTO tb_estoque (quantidade) VALUES (200);
-
-UPDATE tb_produto SET estoque_id = 1 WHERE id = 1;
-UPDATE tb_produto SET estoque_id = 2 WHERE id = 2;
-
-UPDATE tb_ingrediente SET estoque_id = 3 WHERE id = 1;
-UPDATE tb_ingrediente SET estoque_id = 4 WHERE id = 2;
-UPDATE tb_ingrediente SET estoque_id = 5 WHERE id = 3;
-UPDATE tb_ingrediente SET estoque_id = 6 WHERE id = 4;
-UPDATE tb_ingrediente SET estoque_id = 7 WHERE id = 5;
+INSERT INTO tb_estoque (id, estocavel_id, estocavel_tipo, estocavel_unidade_de_medida, operacao_no_estoque, quantidade) values (1, 1, 'produto', 'unidade', 'entrada', 5);
+INSERT INTO tb_estoque (id, estocavel_id, estocavel_tipo, estocavel_unidade_de_medida, operacao_no_estoque, quantidade) values (2, 2, 'produto', 'unidade', 'entrada', 3);
+INSERT INTO tb_estoque (id, estocavel_id, estocavel_tipo, estocavel_unidade_de_medida, operacao_no_estoque, quantidade) values (3, 3, 'produto', 'unidade', 'entrada', 2);
+INSERT INTO tb_estoque (id, estocavel_id, estocavel_tipo, estocavel_unidade_de_medida, operacao_no_estoque, quantidade) values (4, 1, 'ingrediente', 'kg', 'entrada', 5000);
+INSERT INTO tb_estoque (id, estocavel_id, estocavel_tipo, estocavel_unidade_de_medida, operacao_no_estoque, quantidade) values (5, 1, 'ingrediente', 'kg', 'saida', -2000);

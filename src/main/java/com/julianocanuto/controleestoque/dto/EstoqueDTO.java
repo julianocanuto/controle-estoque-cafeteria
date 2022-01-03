@@ -1,21 +1,13 @@
-package com.julianocanuto.controleestoque.entidades;
+package com.julianocanuto.controleestoque.dto;
 
 import java.io.Serializable;
 import java.util.Objects;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
-import javax.persistence.Table;
+import com.julianocanuto.controleestoque.entidades.Estoque;
 
-@Entity
-@Table(name = "tb_estoque")
-public class Estoque implements Serializable {
+public class EstoqueDTO implements Serializable {
 	private static final long serialVersionUID = 1L;
 
-	@Id
-	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
 	private Long estocavelId;
 	private Double quantidade;
@@ -23,11 +15,11 @@ public class Estoque implements Serializable {
 	private String estocavelTipo;
 	private String estocavelUnidadeDeMedida;
 
-	public Estoque() {
+	public EstoqueDTO() {
 
 	}
 
-	public Estoque(Long id, Long estocavelId, Double quantidade, String operacaoNoEstoque, String estocavelTipo,
+	public EstoqueDTO(Long id, Long estocavelId, Double quantidade, String operacaoNoEstoque, String estocavelTipo,
 			String estocavelUnidadeDeMedida) {
 		this.id = id;
 		this.estocavelId = estocavelId;
@@ -35,6 +27,15 @@ public class Estoque implements Serializable {
 		this.operacaoNoEstoque = operacaoNoEstoque;
 		this.estocavelTipo = estocavelTipo;
 		this.estocavelUnidadeDeMedida = estocavelUnidadeDeMedida;
+	}
+
+	public EstoqueDTO(Estoque entity) {
+		id = entity.getId();
+		estocavelId = entity.getEstocavelId();
+		quantidade = entity.getQuantidade();
+		operacaoNoEstoque = entity.getOperacaoNoEstoque();
+		estocavelTipo = entity.getEstocavelTipo();
+		estocavelUnidadeDeMedida = entity.getEstocavelUnidadeDeMedida();
 	}
 
 	public Long getId() {
@@ -86,13 +87,6 @@ public class Estoque implements Serializable {
 	}
 
 	@Override
-	public String toString() {
-		return "Estoque [id=" + id + ", estocavelId=" + estocavelId + ", quantidade=" + quantidade
-				+ ", operacaoNoEstoque=" + operacaoNoEstoque + ", estocavelTipo=" + estocavelTipo
-				+ ", estocavelUnidadeDeMedida=" + estocavelUnidadeDeMedida + "]";
-	}
-
-	@Override
 	public int hashCode() {
 		return Objects.hash(id);
 	}
@@ -105,8 +99,15 @@ public class Estoque implements Serializable {
 			return false;
 		if (getClass() != obj.getClass())
 			return false;
-		Estoque other = (Estoque) obj;
+		EstoqueDTO other = (EstoqueDTO) obj;
 		return Objects.equals(id, other.id);
+	}
+
+	@Override
+	public String toString() {
+		return "EstoqueDTO [id=" + id + ", estocavelId=" + estocavelId + ", quantidade=" + quantidade
+				+ ", operacaoNoEstoque=" + operacaoNoEstoque + ", estocavelTipo=" + estocavelTipo
+				+ ", estocavelUnidadeDeMedida=" + estocavelUnidadeDeMedida + "]";
 	}
 
 }

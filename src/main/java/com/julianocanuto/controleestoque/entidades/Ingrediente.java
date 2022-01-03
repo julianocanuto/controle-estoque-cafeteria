@@ -7,13 +7,11 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
-import javax.persistence.JoinColumn;
-import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 
 @Entity
 @Table(name = "tb_ingrediente")
-public class Ingrediente implements Serializable {
+public class Ingrediente extends Estocavel implements Serializable {
 	private static final long serialVersionUID = 1L;
 
 	@Id
@@ -23,10 +21,6 @@ public class Ingrediente implements Serializable {
 	private String unidadeDeMedida;
 	private Double precoUnitario;
 
-	@ManyToOne
-	@JoinColumn(name = "estoque_id")
-	private Estoque estoque;
-	
 	public Ingrediente() {
 
 	}
@@ -89,6 +83,11 @@ public class Ingrediente implements Serializable {
 			return false;
 		Ingrediente other = (Ingrediente) obj;
 		return Objects.equals(id, other.id);
+	}
+
+	@Override
+	public String getTipo() {
+		return "ingrediente";
 	}
 
 }
