@@ -43,7 +43,7 @@ Situação resolvida, agora o cliente pediu novas alterações, como sempre. **E
 - :construction: Validar todos os campos para ninguem quebrar a loja
 - :white_check_mark: Login precisa ser criptografado a senha
 - Documentar para entendimento do código. (comentar algumas coisas explicando)
-- :construction: Tratar erros corretamente (404 para não encontrado), (200 | 202 para OK), etc
+- :white_check_mark: Tratar erros corretamente (404 para não encontrado), (200 | 202 para OK), etc
 
 ## :memo: Requisitos:
 - :white_check_mark: Utilizar Spring Boot e Hibernate
@@ -77,7 +77,6 @@ Situação resolvida, agora o cliente pediu novas alterações, como sempre. **E
     - [ ] DELETE
   - [ ] Precisamos de uma rota que retorne todos os produtos e o custo de cada um.
   - [ ] Documentar para entendimento do código. (comentar algumas coisas explicando)
-  - [ ] Tratar erros corretamente (404 para não encontrado), (200 | 202 para OK), etc
   - [ ] Upload de imagens 
   - [ ] Restringir o upload de imagens aos seguintes formatos: PNG e JPG
 
@@ -96,7 +95,6 @@ Situação resolvida, agora o cliente pediu novas alterações, como sempre. **E
   - :white_check_mark: Validar todos os campos para ninguem quebrar a loja
   - :white_check_mark: Login precisa ser criptografado a senha
   - :white_check_mark: Tratar erros corretamente (404 para não encontrado), (200 | 202 para OK), etc
-    - :white_check_mark: p/ CRUD User
 
 # :book: Referências
 
