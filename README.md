@@ -96,6 +96,9 @@ Situação resolvida, agora o cliente pediu novas alterações, como sempre. **E
   - :white_check_mark: Login precisa ser criptografado a senha
   - :white_check_mark: Tratar erros corretamente (404 para não encontrado), (200 | 202 para OK), etc
 
+## :tada: v1.1.0
+- Adiciona a possibilidade de inserir **Produtos** e **Ingredientes** ao estoque.
+
 # :book: Referências
 
 1. https://vladmihalcea.com/the-best-way-to-map-a-onetomany-association-with-jpa-and-hibernate/
